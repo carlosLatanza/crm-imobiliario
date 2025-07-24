@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Editar Imobiliária</title>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    .sidebar {
+      width: 260px;
+      background: #2c3e50;
+      color: #fff;
+      height: 100vh;
+      padding-top: 20px;
+    }
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+    .sidebar li:hover, .sidebar li.active {
+      background: #1abc9c;
+    }
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+      background: #f4f6f8;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .form-section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.05);
+      max-width: 700px;
+    }
+    .form-section h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .button:hover {
+      background-color: #2980b9;
+    }
+  .sidebar a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+    }
+    .sidebar a:hover {
+      text-decoration: none;
+    }
+    .sidebar li.active a {
+      background-color: #1abc9c;
+    }
+    a.button {
+      text-decoration: none;
+      display: inline-block;
+    }
+    a.button:hover {
+      text-decoration: none;
+    }
+                </style>
+</head>
+<body>
+<div class="sidebar">
+<h3>Admin Console</h3>
+<ul>
+<li><a href="gestao-contas-clientes.html">Imobiliárias</a></li>
+<li><a href="planos-assinaturas.html">Planos e Assinaturas</a></li>
+<li><a href="faturas-pagamentos.html">Faturas e Pagamentos</a></li>
+<li><a href="log-auditoria.html">Logs e Auditoria</a></li>
+<li><a href="configuracoes-globais.html">Configurações Globais</a></li>
+</ul>
+</div>
+<div class="content">
+<header>
+<h2>Editar Imobiliária A</h2>
+</header>
+<form>
+<div class="form-section">
+<h3>Informações Cadastrais</h3>
+<div class="form-group">
+<label>Razão Social</label>
+<input type="text" value="Imobiliária A Ltda"/>
+</div>
+<div class="form-group">
+<label>Nome Fantasia</label>
+<input type="text" value="Imobiliária A"/>
+</div>
+<div class="form-group">
+<label>CNPJ</label>
+<input type="text" value="12.345.678/0001-90"/>
+</div>
+<div class="form-group">
+<label>Endereço</label>
+<input type="text" value="Rua Exemplo, 123 - Centro, São Paulo - SP"/>
+</div>
+<div class="form-group">
+<label>Subdomínio</label>
+<input type="text" value="imob-a.crm.com"/>
+</div>
+<div class="form-group">
+<label>Status</label>
+<select>
+<option selected="">Ativa</option>
+<option>Trial</option>
+<option>Inativa</option>
+<option>Suspensa</option>
+</select>
+</div>
+</div>
+<div class="form-section">
+<h3>Plano e Assinatura</h3>
+<div class="form-group">
+<label>Plano</label>
+<select>
+<option>Basic</option>
+<option selected="">Pro</option>
+<option>Enterprise</option>
+</select>
+</div>
+<div class="form-group">
+<label>Início da Assinatura</label>
+<input type="date" value="2023-04-15"/>
+</div>
+<div class="form-group">
+<label>Forma de Pagamento</label>
+<select>
+<option selected="">Boleto Bancário</option>
+<option>Cartão de Crédito</option>
+<option>PIX</option>
+</select>
+</div>
+</div>
+<div class="form-section">
+<h3>Configurações da Conta</h3>
+<div class="form-group">
+<label>Moeda</label>
+<select>
+<option selected="">BRL</option>
+<option>USD</option>
+<option>EUR</option>
+</select>
+</div>
+<div class="form-group">
+<label>Fuso Horário</label>
+<select>
+<option selected="">America/Sao_Paulo</option>
+<option>America/New_York</option>
+<option>Europe/Lisbon</option>
+</select>
+</div>
+<div class="form-group">
+<label>Idioma</label>
+<select>
+<option selected="">Português (Brasil)</option>
+<option>Inglês</option>
+<option>Espanhol</option>
+</select>
+</div>
+</div>
+<button class="button" type="submit">Salvar Alterações</button>
+</form>
+</div>
+</body>
+</html>

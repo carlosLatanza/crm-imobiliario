@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Criar/Eeditar Plano</title>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    .sidebar {
+      width: 260px;
+      background: #2c3e50;
+      color: #fff;
+      height: 100vh;
+      padding-top: 20px;
+    }
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+    .sidebar li:hover, .sidebar li.active {
+      background: #1abc9c;
+    }
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+      background: #f4f6f8;
+    }
+    header {
+      margin-bottom: 20px;
+    }
+    .form-section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.05);
+      max-width: 700px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-group textarea {
+      resize: vertical;
+    }
+    .button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    .button:hover {
+      background-color: #2980b9;
+    }
+  .sidebar a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+    }
+    .sidebar a:hover {
+      text-decoration: none;
+    }
+    .sidebar li.active a {
+      background-color: #1abc9c;
+    }
+    a.button {
+      text-decoration: none;
+      display: inline-block;
+    }
+    a.button:hover {
+      text-decoration: none;
+    }
+                </style>
+</head>
+<body>
+<div class="sidebar">
+<h3>Admin Console</h3>
+<ul>
+<li><a href="gestao-contas-clientes.html">Imobiliárias</a></li>
+<li><a href="planos-assinaturas.html">Planos e Assinaturas</a></li>
+<li><a href="faturas-pagamentos.html">Faturas e Pagamentos</a></li>
+<li><a href="log-auditoria.html">Logs e Auditoria</a></li>
+<li><a href="configuracoes-globais.html">Configurações Globais</a></li>
+</ul>
+</div>
+<div class="content">
+<header>
+<h2>Criar / Editar Plano</h2>
+</header>
+<form class="form-section">
+<div class="form-group">
+<label>Nome do Plano</label>
+<input placeholder="Ex: Basic, Pro, Enterprise" type="text"/>
+</div>
+<div class="form-group">
+<label>Preço Mensal (R$)</label>
+<input placeholder="Ex: 49.90" step="0.01" type="number"/>
+</div>
+<div class="form-group">
+<label>Descrição / Benefícios</label>
+<textarea placeholder="Resumo das vantagens do plano" rows="4"></textarea>
+</div>
+<div class="form-group">
+<label>Limite de Usuários</label>
+<input placeholder="Ex: 5 ou 0 para ilimitado" type="number"/>
+</div>
+<div class="form-group">
+<label>Limite de Imóveis</label>
+<input placeholder="Ex: 100 ou 0 para ilimitado" type="number"/>
+</div>
+<div class="form-group">
+<label>Limite de Leads Mensais</label>
+<input placeholder="Ex: 200 ou 0 para ilimitado" type="number"/>
+</div>
+<div class="form-group">
+<label>Acesso a Recursos</label>
+<select multiple="">
+<option>Automação e Chatbot</option>
+<option>Personalização de Portal</option>
+<option>Integração com API</option>
+<option>Assinatura Eletrônica</option>
+</select>
+</div>
+<div class="form-group">
+<label>Status do Plano</label>
+<select>
+<option>Ativo</option>
+<option>Inativo</option>
+</select>
+</div>
+<button class="button" type="submit">Salvar Plano</button>
+</form>
+</div>
+</body>
+</html>

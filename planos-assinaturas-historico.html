@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Histórico de Faturas - Imob Beta</title>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    .sidebar {
+      width: 260px;
+      background: #2c3e50;
+      color: #fff;
+      height: 100vh;
+      padding-top: 20px;
+    }
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+    .sidebar li:hover, .sidebar li.active {
+      background: #1abc9c;
+    }
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+      background: #f4f6f8;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background: #ecf0f1;
+    }
+    .button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 6px 10px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-right: 5px;
+    }
+    .button:hover {
+      background-color: #2980b9;
+    }
+    .status-pago {
+      color: green;
+      font-weight: bold;
+    }
+    .status-pendente {
+      color: orange;
+      font-weight: bold;
+    }
+    .status-vencido {
+      color: red;
+      font-weight: bold;
+    }
+    .status-cancelado {
+      color: gray;
+      font-weight: bold;
+    }
+  .sidebar a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+    }
+    .sidebar a:hover {
+      text-decoration: none;
+    }
+    .sidebar li.active a {
+      background-color: #1abc9c;
+    }
+    a.button {
+      text-decoration: none;
+      display: inline-block;
+    }
+    a.button:hover {
+      text-decoration: none;
+    }
+                </style>
+</head>
+<body>
+<div class="sidebar">
+<h3>Admin Console</h3>
+<ul>
+<li><a href="gestao-contas-clientes.html">Imobiliárias</a></li>
+<li><a href="planos-assinaturas.html">Planos e Assinaturas</a></li>
+<li><a href="faturas-pagamentos.html">Faturas e Pagamentos</a></li>
+<li><a href="log-auditoria.html">Logs e Auditoria</a></li>
+<li><a href="configuracoes-globais.html">Configurações Globais</a></li>
+</ul>
+</div>
+<div class="content">
+<header>
+<h2>Histórico de Faturas - Imob Beta</h2>
+<a class="button" href="faturas-pagamentos.html">← Voltar</a>
+</header>
+<table>
+<thead>
+<tr>
+<th>Nº Fatura</th>
+<th>Valor</th>
+<th>Emissão</th>
+<th>Vencimento</th>
+<th>Forma Pagamento</th>
+<th>Status</th>
+<th>Ações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20250701-0001</td>
+<td>R$ 99,90</td>
+<td>01/07/2025</td>
+<td>10/07/2025</td>
+<td>Boleto</td>
+<td class="status-pendente">Pendente</td>
+<td>
+<button class="button">Reenviar</button>
+<a class="button" href="planos-assinaturas-fatura.html">Ver Fatura</a>
+</td>
+</tr>
+<tr>
+<td>20250601-0004</td>
+<td>R$ 99,90</td>
+<td>01/06/2025</td>
+<td>10/06/2025</td>
+<td>Cartão</td>
+<td class="status-pago">Pago</td>
+<td>
+<a class="button" href="planos-assinaturas-fatura.html">Ver Fatura</a>
+<button class="button">Ver Recibo</button>
+</td>
+</tr>
+<tr>
+<td>20250501-0003</td>
+<td>R$ 99,90</td>
+<td>01/05/2025</td>
+<td>10/05/2025</td>
+<td>Pix</td>
+<td class="status-pago">Pago</td>
+<td>
+<a class="button" href="planos-assinaturas-fatura.html">Ver Fatura</a>
+<button class="button">Ver Recibo</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

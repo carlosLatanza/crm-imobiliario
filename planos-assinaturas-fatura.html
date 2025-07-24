@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Visualização da Fatura</title>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    .sidebar {
+      width: 260px;
+      background: #2c3e50;
+      color: #fff;
+      height: 100vh;
+      padding-top: 20px;
+    }
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+    .sidebar li:hover, .sidebar li.active {
+      background: #1abc9c;
+    }
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+      background: #f4f6f8;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.05);
+    }
+    .section h3 {
+      margin-top: 0;
+    }
+    .info-line {
+      margin-bottom: 10px;
+    }
+    .info-line label {
+      font-weight: bold;
+      display: block;
+    }
+    .info-line span {
+      display: block;
+      margin-top: 4px;
+    }
+    .button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .button:hover {
+      background-color: #2980b9;
+    }
+  .sidebar a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+    }
+    .sidebar a:hover {
+      text-decoration: none;
+    }
+    .sidebar li.active a {
+      background-color: #1abc9c;
+    }
+    a.button {
+      text-decoration: none;
+      display: inline-block;
+    }
+    a.button:hover {
+      text-decoration: none;
+    }
+                </style>
+</head>
+<body>
+<div class="sidebar">
+<h3>Admin Console</h3>
+<ul>
+<li><a href="gestao-contas-clientes.html">Imobiliárias</a></li>
+<li><a href="planos-assinaturas.html">Planos e Assinaturas</a></li>
+<li><a href="faturas-pagamentos.html">Faturas e Pagamentos</a></li>
+<li><a href="log-auditoria.html">Logs e Auditoria</a></li>
+<li><a href="configuracoes-globais.html">Configurações Globais</a></li>
+</ul>
+</div>
+<div class="content">
+<header>
+<h2>Fatura Nº 20250601-0004</h2>
+<a class="button" href="faturas-pagamentos.html">← Voltar</a>
+</header>
+<div class="section">
+<h3>Informações da Fatura</h3>
+<div class="info-line">
+<label>Imobiliária</label>
+<span>Imob Beta</span>
+</div>
+<div class="info-line">
+<label>CNPJ</label>
+<span>98.765.432/0001-11</span>
+</div>
+<div class="info-line">
+<label>Data de Emissão</label>
+<span>01/06/2025</span>
+</div>
+<div class="info-line">
+<label>Vencimento</label>
+<span>10/06/2025</span>
+</div>
+<div class="info-line">
+<label>Valor Total</label>
+<span>R$ 199,90</span>
+</div>
+<div class="info-line">
+<label>Status</label>
+<span style="color:green;font-weight:bold">Pago</span>
+</div>
+<div class="info-line">
+<label>Forma de Pagamento</label>
+<span>Cartão de Crédito</span>
+</div>
+</div>
+<div class="section">
+<h3>Itens da Fatura</h3>
+<ul>
+<li>Plano Pro - Mensalidade - R$ 99,90</li>
+<li>Adicional: Slot extra de corretor - R$ 50,00</li>
+<li>Adicional: Integração API - R$ 50,00</li>
+</ul>
+</div>
+<div class="section">
+<h3>Recibos e Documentos</h3>
+<button class="button">📄 Baixar PDF da Fatura</button>
+<button class="button">🧾 Ver Recibo de Pagamento</button>
+<button class="button">🧾 Ver Nota Fiscal (NFS-e)</button>
+</div>
+</div>
+</body>
+</html>

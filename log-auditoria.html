@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Logs e Auditoria</title>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    .sidebar {
+      width: 260px;
+      background: #2c3e50;
+      color: #fff;
+      height: 100vh;
+      padding-top: 20px;
+    }
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+    .sidebar li:hover, .sidebar li.active {
+      background: #1abc9c;
+    }
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+      background: #f4f6f8;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .search-bar {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    .search-bar input, .search-bar select {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .search-bar button {
+      padding: 8px 16px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background: #ecf0f1;
+    }
+  .sidebar a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .sidebar li.active a {
+      background-color: #1abc9c;
+    }
+    a.button {
+      text-decoration: none;
+      display: inline-block;
+    }
+    a.button:hover {
+      text-decoration: none;
+    }
+                </style>
+</head>
+<body>
+<div class="sidebar">
+<h3>Admin Console</h3>
+<ul>
+<li><a href="gestao-contas-clientes.html">Imobiliárias</a></li>
+<li><a href="planos-assinaturas.html">Planos e Assinaturas</a></li>
+<li><a href="faturas-pagamentos.html">Faturas e Pagamentos</a></li>
+<li class="active"><a href="log-auditoria.html">Logs e Auditoria</a></li>
+<li><a href="configuracoes-globais.html">Configurações Globais</a></li>
+</ul>
+</div>
+<div class="content">
+<header>
+<h2>Logs e Auditoria</h2>
+</header>
+<div class="search-bar">
+<input placeholder="Buscar por usuário ou ação" type="text"/>
+<input type="date"/>
+<input type="date"/>
+<select>
+<option>Todos os tipos</option>
+<option>Login</option>
+<option>Alteração de dados</option>
+<option>Criação de fatura</option>
+<option>Cancelamento</option>
+</select>
+<button>Buscar</button>
+</div>
+<table>
+<thead>
+<tr>
+<th>Data/Hora</th>
+<th>Usuário</th>
+<th>Ação</th>
+<th>Descrição</th>
+<th>IP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>23/07/2025 14:02</td>
+<td>admin@crm.com</td>
+<td>Login</td>
+<td>Acesso ao sistema</td>
+<td>189.20.112.30</td>
+</tr>
+<tr>
+<td>23/07/2025 14:10</td>
+<td>admin@crm.com</td>
+<td>Criação de fatura</td>
+<td>Fatura 20250701-0001 gerada para Imob Alfa</td>
+<td>189.20.112.30</td>
+</tr>
+<tr>
+<td>23/07/2025 14:15</td>
+<td>admin@crm.com</td>
+<td>Alteração de dados</td>
+<td>Plano da Imob Beta alterado de Basic para Pro</td>
+<td>189.20.112.30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

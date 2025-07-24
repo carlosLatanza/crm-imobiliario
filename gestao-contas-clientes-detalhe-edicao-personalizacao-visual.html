@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Personalização Visual</title>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    .sidebar {
+      width: 260px;
+      background: #2c3e50;
+      color: #fff;
+      height: 100vh;
+      padding-top: 20px;
+    }
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+    .sidebar li:hover, .sidebar li.active {
+      background: #1abc9c;
+    }
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+      background: #f4f6f8;
+    }
+    header {
+      margin-bottom: 20px;
+    }
+    .form-section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.05);
+      max-width: 700px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="file"],
+    .form-group input[type="color"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    .button:hover {
+      background-color: #2980b9;
+    }
+    .preview {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    }
+  .sidebar a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+    }
+    .sidebar a:hover {
+      text-decoration: none;
+    }
+    .sidebar li.active a {
+      background-color: #1abc9c;
+    }
+    a.button {
+      text-decoration: none;
+      display: inline-block;
+    }
+    a.button:hover {
+      text-decoration: none;
+    }
+                </style>
+</head>
+<body>
+<div class="sidebar">
+<h3>Admin Console</h3>
+<ul>
+<li><a href="gestao-contas-clientes.html">Imobiliárias</a></li>
+<li><a href="planos-assinaturas.html">Planos e Assinaturas</a></li>
+<li><a href="faturas-pagamentos.html">Faturas e Pagamentos</a></li>
+<li><a href="log-auditoria.html">Logs e Auditoria</a></li>
+<li><a href="configuracoes-globais.html">Configurações Globais</a></li>
+</ul>
+</div>
+<div class="content">
+<header>
+<h2>Personalização Visual - Imobiliária A</h2>
+</header>
+<div class="form-section">
+<div class="form-group">
+<label>Upload de Logotipo</label>
+<input accept=".png,.jpg,.svg" type="file"/>
+</div>
+<div class="form-group">
+<label>Cor Primária</label>
+<input type="color" value="#3498db"/>
+</div>
+<div class="form-group">
+<label>Cor Secundária</label>
+<input type="color" value="#2c3e50"/>
+</div>
+<div class="form-group">
+<label>Imagem de Fundo (opcional)</label>
+<input accept=".jpg,.png" type="file"/>
+</div>
+<button class="button" type="submit">Salvar Personalização</button>
+<button class="button" style="background:#ccc; color:#000; margin-left: 10px;">Restaurar Padrões</button>
+<div class="preview">
+<p><strong>Preview da identidade visual:</strong></p>
+<div style="background:#3498db; color:#fff; padding:10px; border-radius:4px;">Topo do Portal com Cor Primária</div>
+<div style="background:#2c3e50; color:#fff; padding:10px; margin-top:10px; border-radius:4px;">Rodapé com Cor Secundária</div>
+</div>
+</div>
+</div>
+</body>
+</html>

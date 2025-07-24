@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detalhes da Imobiliária</title>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    .sidebar {
+      width: 260px;
+      background: #2c3e50;
+      color: #fff;
+      height: 100vh;
+      padding-top: 20px;
+    }
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+    .sidebar li:hover, .sidebar li.active {
+      background: #1abc9c;
+    }
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+      background: #f4f6f8;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.05);
+    }
+    .section h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    .info-line {
+      margin-bottom: 10px;
+    }
+    .info-line label {
+      font-weight: bold;
+      display: block;
+    }
+    .info-line span {
+      display: block;
+      margin-top: 4px;
+    }
+    .button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-left: 10px;
+    }
+    .button:hover {
+      background-color: #2980b9;
+    }
+  .sidebar a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+    }
+    .sidebar a:hover {
+      text-decoration: none;
+    }
+    .sidebar li.active a {
+      background-color: #1abc9c;
+    }
+    a.button {
+      text-decoration: none;
+      display: inline-block;
+    }
+    a.button:hover {
+      text-decoration: none;
+    }
+                </style>
+</head>
+<body>
+<div class="sidebar">
+<h3>Admin Console</h3>
+<ul>
+<li><a href="gestao-contas-clientes.html">Imobiliárias</a></li>
+<li><a href="planos-assinaturas.html">Planos e Assinaturas</a></li>
+<li><a href="faturas-pagamentos.html">Faturas e Pagamentos</a></li>
+<li><a href="log-auditoria.html">Logs e Auditoria</a></li>
+<li><a href="configuracoes-globais.html">Configurações Globais</a></li>
+</ul>
+</div>
+<div class="content">
+<header>
+<h2>Detalhes da Imobiliária A</h2>
+<div>
+<a class="button" href="gestao-contas-clientes-detalhe-edicao.html">Editar</a>
+<a class="button" href="gestao-contas-clientes-detalhe-usuarios-vinculados.html">Usuários Vinculados</a>
+<a class="button" href="gestao-contas-clientes-detalhe-edicao-personalizacao-visual.html">Personalização Visual</a>
+</div>
+</header>
+<div class="section">
+<h3>Informações Cadastrais</h3>
+<div class="info-line">
+<label>Razão Social</label>
+<span>Imobiliária A Ltda</span>
+</div>
+<div class="info-line">
+<label>Nome Fantasia</label>
+<span>Imobiliária A</span>
+</div>
+<div class="info-line">
+<label>CNPJ</label>
+<span>12.345.678/0001-90</span>
+</div>
+<div class="info-line">
+<label>Endereço</label>
+<span>Rua Exemplo, 123 - Centro, São Paulo - SP</span>
+</div>
+<div class="info-line">
+<label>Subdomínio</label>
+<span>imob-a.crm.com</span>
+</div>
+<div class="info-line">
+<label>Status</label>
+<span>Ativa</span>
+</div>
+</div>
+<div class="section">
+<h3>Plano e Assinatura</h3>
+<div class="info-line">
+<label>Plano Contratado</label>
+<span>Pro</span>
+</div>
+<div class="info-line">
+<label>Início da Assinatura</label>
+<span>15/04/2023</span>
+</div>
+<div class="info-line">
+<label>Próxima Fatura</label>
+<span>15/07/2025</span>
+</div>
+<div class="info-line">
+<label>Forma de Pagamento</label>
+<span>Boleto Bancário</span>
+</div>
+</div>
+<div class="section">
+<h3>Configurações da Conta</h3>
+<div class="info-line">
+<label>Moeda</label>
+<span>BRL</span>
+</div>
+<div class="info-line">
+<label>Fuso Horário</label>
+<span>America/Sao_Paulo</span>
+</div>
+<div class="info-line">
+<label>Idioma</label>
+<span>Português (Brasil)</span>
+</div>
+</div>
+</div>
+</body>
+</html>

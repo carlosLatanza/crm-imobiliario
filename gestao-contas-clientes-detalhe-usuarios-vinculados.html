@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Usuários Vinculados - Imobiliária A</title>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    .sidebar {
+      width: 260px;
+      background: #2c3e50;
+      color: #fff;
+      height: 100vh;
+      padding-top: 20px;
+    }
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+    .sidebar li:hover, .sidebar li.active {
+      background: #1abc9c;
+    }
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+      background: #f4f6f8;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background: #ecf0f1;
+    }
+    .button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .button:hover {
+      background-color: #2980b9;
+    }
+    .status-ativo {
+      color: green;
+      font-weight: bold;
+    }
+    .status-inativo {
+      color: red;
+      font-weight: bold;
+    }
+  .sidebar a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+    }
+    .sidebar a:hover {
+      text-decoration: none;
+    }
+    .sidebar li.active a {
+      background-color: #1abc9c;
+    }
+    a.button {
+      text-decoration: none;
+      display: inline-block;
+    }
+    a.button:hover {
+      text-decoration: none;
+    }
+                </style>
+</head>
+<body>
+<div class="sidebar">
+<h3>Admin Console</h3>
+<ul>
+<li><a href="gestao-contas-clientes.html">Imobiliárias</a></li>
+<li><a href="planos-assinaturas.html">Planos e Assinaturas</a></li>
+<li><a href="faturas-pagamentos.html">Faturas e Pagamentos</a></li>
+<li><a href="log-auditoria.html">Logs e Auditoria</a></li>
+<li><a href="configuracoes-globais.html">Configurações Globais</a></li>
+</ul>
+</div>
+<div class="content">
+<header>
+<h2>Usuários Vinculados - Imobiliária A</h2>
+<a class="button" href="gestao-contas-clientes-detalhe-usuarios-vinculados-cadastro.html">+ Novo Usuário</a>
+</header>
+<table>
+<thead>
+<tr>
+<th>Nome</th>
+<th>E-mail</th>
+<th>Função</th>
+<th>Status</th>
+<th>Ações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>João Silva</td>
+<td>joao@imob-a.com</td>
+<td>Administrador</td>
+<td class="status-ativo">Ativo</td>
+<td>
+<a class="button" href="gestao-contas-clientes-detalhe-edicao.html">Editar</a>
+<button class="button">Desativar</button>
+</td>
+</tr>
+<tr>
+<td>Maria Oliveira</td>
+<td>maria@imob-a.com</td>
+<td>Corretora</td>
+<td class="status-ativo">Ativo</td>
+<td>
+<a class="button" href="gestao-contas-clientes-detalhe-edicao.html">Editar</a>
+<button class="button">Desativar</button>
+</td>
+</tr>
+<tr>
+<td>Carlos Lima</td>
+<td>carlos@imob-a.com</td>
+<td>Financeiro</td>
+<td class="status-inativo">Inativo</td>
+<td>
+<a class="button" href="gestao-contas-clientes-detalhe-edicao.html">Editar</a>
+<button class="button">Ativar</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
