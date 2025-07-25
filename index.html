@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Admin Console</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestão de Imóveis</title>
   <style>
     body {
       margin: 0;
@@ -29,6 +29,10 @@
       padding: 12px 20px;
       cursor: pointer;
     }
+    .sidebar li:hover,
+    .sidebar li.active {
+      background: #1abc9c;
+    }
     .sidebar a {
       color: #ffffff;
       text-decoration: none;
@@ -37,29 +41,270 @@
     .sidebar a:hover {
       text-decoration: none;
     }
-    .sidebar li.active a {
-      background-color: #1abc9c;
-    }
     .content {
       flex-grow: 1;
       padding: 20px;
       background: #f4f6f8;
     }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: flex-end;
+      margin-bottom: 25px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .filters label {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .filter-group input,
+    .filter-group select {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      min-width: 180px;
+    }
+    .range-group {
+      display: flex;
+      gap: 6px;
+    }
+    .range-group input {
+      width: 80px;
+    }
+    .button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background-color: #2980b9;
+    }
+    table {
+      width: 100%;
+      background: #fff;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th,
+    td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+      line-height: 1.5;
+    }
+    th {
+      background: #ecf0f1;
+    }
+    .pagination {
+      margin-top: 10px;
+      text-align: center;
+    }
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+    .modal {
+      background: white;
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    .modal h2 {
+      margin-top: 0;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 12px;
+    }
+    .close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 18px;
+      color: #666;
+      cursor: pointer;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px 20px;
+      margin-top: 20px;
+    }
+    .grid input, .grid select {
+      width: 100%;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .checkbox-group {
+      display: flex;
+      gap: 40px;
+      margin-top: 20px;
+    }
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
   </style>
+  <script>
+    function abrirModal() {
+      document.getElementById("modalOverlay").style.display = "block";
+    }
+    function fecharModal() {
+      document.getElementById("modalOverlay").style.display = "none";
+    }
+  </script>
 </head>
 <body>
   <div class="sidebar">
-    <h3>Admin Console</h3>
+    <h3>CRM Imobiliário</h3>
     <ul>
-      <li><a href="gestao-contas-clientes.html">Imobiliárias</a></li>
-      <li><a href="planos-assinaturas.html">Planos e Assinaturas</a></li>
-      <li><a href="faturas-pagamentos.html">Faturas e Pagamentos</a></li>
-      <li><a href="log-auditoria.html">Logs e Auditoria</a></li>
-      <li><a href="configuracoes-globais.html">Configurações Globais</a></li>
+      <li class="active"><a href="gestao-imoveis.html">Imóveis</a></li>
+      <li><a href="#">Leads</a></li>
+      <li><a href="#">Comunicação</a></li>
+      <li><a href="#">Agenda</a></li>
+      <li><a href="#">Equipe</a></li>
+      <li><a href="#">Insights</a></li>
+      <li><a href="#">Financeiro</a></li>
+      <li><a href="#">Marketing</a></li>
+      <li><a href="#">IA</a></li>
+      <li><a href="#">Portal</a></li>
+      <li><a href="#">Documentos</a></li>
     </ul>
   </div>
   <div class="content">
-    <!-- Conteúdo vazio -->
+    <div class="header">
+      <h2>Busca de Imóveis</h2>
+      <a href="gestao-imoveis-cadastro.html" class="button">+ Novo Imóvel</a>
+    </div>
+
+    <div class="filters">
+      <div class="filter-group">
+        <label>Localização</label>
+        <input type="text" placeholder="Digite cidade ou bairro" />
+      </div>
+      <div class="filter-group">
+        <label>Finalidade</label>
+        <select><option>Comprar</option><option>Alugar</option></select>
+      </div>
+      <div class="filter-group">
+        <label>Tipo</label>
+        <select><option>Imóvel</option></select>
+      </div>
+      <div class="filter-group">
+        <label>Quartos</label>
+        <div class="range-group">
+          <input type="number" placeholder="mínimo" />
+          <input type="number" placeholder="máximo" />
+        </div>
+      </div>
+      <div class="filter-group">
+        <label>Valor</label>
+        <div class="range-group">
+          <input type="number" placeholder="mínimo" />
+          <input type="number" placeholder="máximo" />
+        </div>
+      </div>
+      <div class="filter-group">
+        <label>&nbsp;</label>
+        <button class="button" onclick="abrirModal()">⚙️ Mais Filtros</button>
+      </div>
+      <div class="filter-group">
+        <label>&nbsp;</label>
+        <button class="button">🔍 Buscar</button>
+      </div>
+    </div>
+
+    <h3>Resultado da Busca de Imóveis</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Título</th>
+          <th>Tipo</th>
+          <th>Finalidade</th>
+          <th>Valor</th>
+          <th>Status</th>
+          <th>Endereço</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#00123</td>
+          <td>Residencial Lazer Jardim</td>
+          <td>Residencial</td>
+          <td>Venda</td>
+          <td>R$ 750.000</td>
+          <td>Disponível</td>
+          <td>Paulínia/SP</td>
+          <td><a href="gestao-imoveis-detalhe.html" class="button">Detalhes</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pagination">Página 1 de 1</div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="modal">
+      <span class="close" onclick="fecharModal()">&times;</span>
+      <h2>Filtros Avançados</h2>
+      <div class="grid">
+        <div><label>Status</label><select><option>Todos</option><option>Disponível</option><option>Reservado</option><option>Vendido</option></select></div>
+        <div><label>Empreendimento</label><input type="text"></div>
+        <div><label>País</label><input type="text"></div>
+        <div><label>Estado</label><input type="text"></div>
+        <div><label>Cidade</label><input type="text"></div>
+        <div><label>Bairro</label><input type="text"></div>
+        <div><label>Metragem (mínimo)</label><input type="number"></div>
+        <div><label>Metragem (máximo)</label><input type="number"></div>
+        <div><label>Banheiros (mínimo)</label><input type="number"></div>
+        <div><label>Banheiros (máximo)</label><input type="number"></div>
+        <div><label>Vagas (mínimo)</label><input type="number"></div>
+        <div><label>Vagas (máximo)</label><input type="number"></div>
+        <div><label>Latitude</label><input type="number" step="any"></div>
+        <div><label>Longitude</label><input type="number" step="any"></div>
+        <div><label>Raio (em metros)</label><input type="number"></div>
+      </div>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> Piscina</label>
+        <label><input type="checkbox"> Churrasqueira</label>
+        <label><input type="checkbox"> Elevador</label>
+      </div>
+      <div class="actions">
+        <button class="button clear" onclick="fecharModal()">Limpar Filtros</button>
+        <button class="button apply" onclick="fecharModal()">Aplicar Filtros</button>
+      </div>
+    </div>
   </div>
 </body>
 </html>
