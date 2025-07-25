@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Filtros Avançados</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgba(0,0,0,0.5);
+      margin: 0;
+    }
+    .modal {
+      background-color: #fff;
+      width: 1000px;
+      margin: 60px auto;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    .modal h2 {
+      margin-top: 0;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #ccc;
+    }
+    .close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 18px;
+      color: #666;
+      cursor: pointer;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px 20px;
+      margin-top: 20px;
+    }
+    label {
+      font-weight: bold;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 4px;
+    }
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .checkbox-group {
+      display: flex;
+      gap: 40px;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 24px 0 0;
+    }
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: normal;
+      font-size: 14px;
+    }
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+    .button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .apply {
+      background-color: #3498db;
+      color: white;
+    }
+    .clear {
+      background-color: #ccc;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="modal">
+    <span class="close" onclick="window.location.href='gestao-imoveis.html'">&times;</span>
+    <h2>Filtros Avançados</h2>
+    <div class="grid">
+      <div><label>Status</label><select><option>Todos</option><option>Disponível</option><option>Reservado</option><option>Vendido</option></select></div>
+      <div><label>Empreendimento</label><input type="text"></div>
+      <div><label>País</label><input type="text"></div>
+      <div><label>Estado</label><input type="text"></div>
+      <div><label>Cidade</label><input type="text"></div>
+      <div><label>Bairro</label><input type="text"></div>
+      <div><label>Metragem (mínimo)</label><input type="number"></div>
+      <div><label>Metragem (máximo)</label><input type="number"></div>
+      <div><label>Banheiros (mínimo)</label><input type="number"></div>
+      <div><label>Banheiros (máximo)</label><input type="number"></div>
+      <div><label>Vagas (mínimo)</label><input type="number"></div>
+      <div><label>Vagas (máximo)</label><input type="number"></div>
+      <div><label>Latitude</label><input type="number" step="any"></div>
+      <div><label>Longitude</label><input type="number" step="any"></div>
+      <div><label>Raio (em metros)</label><input type="number"></div>
+    </div>
+    <div class="checkbox-group">
+      <label><input type="checkbox"> Piscina</label>
+      <label><input type="checkbox"> Churrasqueira</label>
+      <label><input type="checkbox"> Elevador</label>
+    </div>
+    <div class="actions">
+      <button class="button clear" type="button">Limpar Filtros</button>
+      <button class="button apply" onclick="window.location.href='gestao-imoveis.html'">Aplicar Filtros</button>
+    </div>
+  </div>
+</body>
+</html>

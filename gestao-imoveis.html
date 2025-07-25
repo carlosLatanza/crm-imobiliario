@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestão de Imóveis</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+    }
+    .sidebar {
+      width: 260px;
+      background: #2c3e50;
+      color: #fff;
+      height: 100vh;
+      padding-top: 20px;
+    }
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar li {
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+    .sidebar li:hover,
+    .sidebar li.active {
+      background: #1abc9c;
+    }
+    .sidebar a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+    }
+    .sidebar a:hover {
+      text-decoration: none;
+    }
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+      background: #f4f6f8;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: flex-end;
+      margin-bottom: 25px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .filters label {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .filter-group input,
+    .filter-group select {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      min-width: 180px;
+    }
+    .range-group {
+      display: flex;
+      gap: 6px;
+    }
+    .range-group input {
+      width: 80px;
+    }
+    .button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background-color: #2980b9;
+    }
+    table {
+      width: 100%;
+      background: #fff;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th,
+    td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+      line-height: 1.5;
+    }
+    th {
+      background: #ecf0f1;
+    }
+    .pagination {
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h3>CRM Imobiliário</h3>
+    <ul>
+      <li class="active"><a href="#">Imóveis</a></li>
+      <li><a href="#">Leads</a></li>
+      <li><a href="#">Comunicação</a></li>
+      <li><a href="#">Agenda</a></li>
+      <li><a href="#">Equipe</a></li>
+      <li><a href="#">Insights</a></li>
+      <li><a href="#">Financeiro</a></li>
+      <li><a href="#">Marketing</a></li>
+      <li><a href="#">IA</a></li>
+      <li><a href="#">Portal</a></li>
+      <li><a href="#">Documentos</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="header">
+      <h2>Busca de Imóveis</h2>
+      <a href="#" class="button">+ Novo Imóvel</a>
+    </div>
+
+    <div class="filters">
+      <div class="filter-group">
+        <label>Localização</label>
+        <input type="text" placeholder="Digite cidade ou bairro" />
+      </div>
+      <div class="filter-group">
+        <label>Finalidade</label>
+        <select><option>Comprar</option><option>Alugar</option></select>
+      </div>
+      <div class="filter-group">
+        <label>Tipo</label>
+        <select><option>Imóvel</option></select>
+      </div>
+      <div class="filter-group">
+        <label>Quartos</label>
+        <div class="range-group">
+          <input type="number" placeholder="mínimo" />
+          <input type="number" placeholder="máximo" />
+        </div>
+      </div>
+      <div class="filter-group">
+        <label>Valor</label>
+        <div class="range-group">
+          <input type="number" placeholder="mínimo" />
+          <input type="number" placeholder="máximo" />
+        </div>
+      </div>
+      <div class="filter-group">
+        <label>&nbsp;</label>
+        <button class="button" onclick="window.location.href='gestao-imoveis-filtro-busca.html'">⚙️ Mais Filtros</button>
+      </div>
+    </div>
+
+    <h3>Resultado da Busca de Imóveis</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Título</th>
+          <th>Tipo</th>
+          <th>Finalidade</th>
+          <th>Valor</th>
+          <th>Status</th>
+          <th>Endereço</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#00123</td>
+          <td>Apartamento com varanda</td>
+          <td>Residencial</td>
+          <td>Venda</td>
+          <td>R$ 350.000</td>
+          <td>Disponível</td>
+          <td>São Paulo/SP</td>
+          <td><a href="#" class="button">Detalhes</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pagination">Página 1 de 1</div>
+  </div>
+</body>
+</html>
