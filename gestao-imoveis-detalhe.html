@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestão de Imóveis - Detalhes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 260px;
+      background: #2c3e50;
+      color: #fff;
+      height: 100vh;
+      padding-top: 20px;
+    }
+
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      padding: 12px 20px;
+      cursor: pointer;
+    }
+
+    .sidebar li:hover,
+    .sidebar li.active {
+      background: #1abc9c;
+    }
+
+    .sidebar a {
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+    }
+
+    .content {
+      flex-grow: 1;
+      padding: 24px;
+    }
+
+    .section {
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .section h3 {
+      margin-top: 0;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px 20px;
+    }
+
+    .info-item {
+      font-size: 14px;
+    }
+
+    .map-characteristics {
+      display: flex;
+      gap: 40px;
+    }
+
+    .map-characteristics img {
+      width: 300px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .characteristics {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .characteristics span {
+      background-color: #e3fcef;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+    .description {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .media-group {
+      margin-bottom: 16px;
+    }
+
+    .media-group h4 {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .thumbnails img {
+      width: 120px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .history-entry {
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .buttons button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .edit-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h3>CRM Imobiliário</h3>
+    <ul>
+      <li class="active"><a href="#">Imóveis</a></li>
+      <li><a href="#">Leads</a></li>
+      <li><a href="#">Comunicação</a></li>
+      <li><a href="#">Agenda</a></li>
+      <li><a href="#">Equipe</a></li>
+      <li><a href="#">Insights</a></li>
+      <li><a href="#">Financeiro</a></li>
+      <li><a href="#">Marketing</a></li>
+      <li><a href="#">IA</a></li>
+      <li><a href="#">Portal</a></li>
+      <li><a href="#">Documentos</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="section">
+      <h3>📋 Informações Gerais</h3>
+      <div class="info-grid">
+        <div class="info-item"><strong>Título:</strong> Residencial Lazer Jardim</div>
+        <div class="info-item"><strong>Status:</strong> Disponível</div>
+        <div class="info-item"><strong>Tipo:</strong> Residencial</div>
+        <div class="info-item"><strong>Finalidade:</strong> Venda</div>
+        <div class="info-item"><strong>Valor:</strong> R$ 750.000</div>
+        <div class="info-item"><strong>IPTU:</strong> R$ 1.200</div>
+        <div class="info-item"><strong>Condomínio:</strong> R$ 800</div>
+        <div class="info-item"><strong>Administração:</strong> R$ 300</div>
+        <div class="info-item"><strong>Empreendimento:</strong> Residencial Verde Vida</div>
+        <div class="info-item"><strong>Torre:</strong> A</div>
+        <div class="info-item"><strong>Unidade:</strong> 101</div>
+        <div class="info-item"><strong>Metragem:</strong> 90 m²</div>
+        <div class="info-item"><strong>Quartos:</strong> 3</div>
+        <div class="info-item"><strong>Banheiros:</strong> 2</div>
+        <div class="info-item"><strong>Vagas:</strong> 2</div>
+		<div class="info-item"><strong>Código:</strong> #00123</div>
+        <div class="info-item"><strong>Bairro:</strong> Jardim Paulínia</div>
+        <div class="info-item"><strong>Cidade:</strong> Paulínia</div>
+        <div class="info-item"><strong>Estado:</strong> SP</div>
+		<div class="info-item"><strong>País:</strong> Brasil</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>📍 Localização</h3>
+      <div class="map-characteristics">
+        <img src="mapa.png" alt="Mapa do imóvel">
+        <div class="characteristics">
+          <h4>✨ Características</h4>
+          <span>🏊 Piscina</span>
+          <span>🔥 Churrasqueira</span>
+          <span>🛗 Elevador</span>
+          <span>🛋️ Mobiliado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>📝 Descrição</h3>
+      <p class="description">
+        Excelente apartamento com acabamento de alto padrão, varanda gourmet, ótima localização e condomínio completo.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>📁 Arquivos e Mídia</h3>
+
+      <div class="media-group">
+        <h4>📷 Fotos</h4>
+        <div class="thumbnails">
+          <a href="foto1.jpg" target="_blank"><img src="foto1.jpg" alt="Foto 1"></a>
+          <a href="foto2.jpg" target="_blank"><img src="foto2.jpg" alt="Foto 2"></a>
+          <a href="foto3.jpg" target="_blank"><img src="foto3.jpg" alt="Foto 3"></a>
+        </div>
+      </div>
+
+      <div class="media-group"><h4>🎥 Vídeos</h4><p><i>Nenhum vídeo enviado.</i></p></div>
+      <div class="media-group"><h4>📄 Plantas</h4><p><i>Nenhuma planta cadastrada.</i></p></div>
+      <div class="media-group"><h4>📑 Documentos</h4><p><i>Nenhum documento enviado.</i></p></div>
+      <div class="media-group"><h4>🔗 Tour Virtual</h4><p><i>Nenhum link informado.</i></p></div>
+      <div class="media-group"><h4>📎 QR Code</h4><p><i>Nenhum QR Code enviado.</i></p></div>
+    </div>
+
+    <div class="section">
+      <h3>🌐 Publicação Externa</h3>
+      <p>✔️ Imovelweb<br>✔️ Quinto Andar</p>
+    </div>
+
+    <div class="section">
+      <h3>📅 Histórico de Alterações</h3>
+      <div class="history-entry">
+        📌 <strong>20/07/2025</strong> — Valor alterado de <b>R$ 690.000</b> para <b>R$ 750.000</b> por <i>Carlos Lima</i>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button class="delete-btn">Excluir Imóvel</button>
+      <button class="edit-btn">Editar Imóvel</button>
+    </div>
+  </div>
+</body>
+</html>
